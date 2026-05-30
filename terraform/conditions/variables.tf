@@ -1,3 +1,7 @@
+variable "environment" {
+  default = "dev"
+}
+
 variable "ami_id" {
   type = string  
   default     = "ami-0004d31a93c360757"
@@ -5,8 +9,8 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-  type = string 
-  default = "m5a.large"
+    type = string 
+    default = ""
 }
 
 variable "ec2_tags" {
@@ -20,7 +24,7 @@ variable "ec2_tags" {
 }
 
 variable "sg_name" {
-  default = "allow-all-terraform-default"
+  default = "allow-all-terraform"
   type = string
 }
 
